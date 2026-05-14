@@ -63,7 +63,31 @@ opacity:1;
 color:#c58b52;
 }
 
-.hero{
+.hero-glow{
+position:absolute;
+width:500px;
+height:500px;
+background:radial-gradient(circle,#c8a96b 0%,transparent 70%);
+filter:blur(80px);
+opacity:0.18;
+top:50%;
+right:5%;
+transform:translateY(-50%);
+pointer-events:none;
+animation:floatGlow 6s ease-in-out infinite;
+}
+
+@keyframes floatGlow{
+0%{
+transform:translateY(-50%) translateX(0px);
+}
+50%{
+transform:translateY(-53%) translateX(-20px);
+}
+100%{
+transform:translateY(-50%) translateX(0px);
+}
+} .hero{
 min-height:100vh;
 
 background:
@@ -423,7 +447,7 @@ MOMENT
 </nav>
 
 <section class="hero">
-
+<div class="hero-glow"></div>
 <div class="content">
 
 <div class="logo">
