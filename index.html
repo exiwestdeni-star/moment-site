@@ -14,11 +14,56 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 font-family:Arial,sans-serif;
 background:#070707;
 color:white;
 overflow-x:hidden;
+}
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:24px 40px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(16px);
+
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+.nav-logo{
+font-size:26px;
+letter-spacing:8px;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-size:15px;
+opacity:0.8;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+opacity:1;
+color:#c58b52;
 }
 
 .hero{
@@ -38,6 +83,7 @@ padding:40px;
 
 .content{
 max-width:650px;
+margin-top:60px;
 }
 
 .logo{
@@ -180,6 +226,18 @@ font-size:34px;
 margin-top:20px;
 }
 
+.about{
+padding:120px 40px;
+background:#090909;
+}
+
+.about-text{
+max-width:850px;
+font-size:22px;
+line-height:1.9;
+color:#d0d0d0;
+}
+
 .gallery{
 padding:120px 40px;
 }
@@ -202,6 +260,11 @@ position:relative;
 width:100%;
 height:100%;
 object-fit:cover;
+transition:0.5s;
+}
+
+.gallery-item:hover img{
+transform:scale(1.05);
 }
 
 .footer{
@@ -219,6 +282,14 @@ color:white;
 }
 
 @media(max-width:768px){
+
+.nav-links{
+display:none;
+}
+
+.navbar{
+padding:20px 25px;
+}
 
 .hero{
 padding:25px;
@@ -249,6 +320,10 @@ width:100%;
 font-size:40px;
 }
 
+.about-text{
+font-size:18px;
+}
+
 }
 
 </style>
@@ -256,6 +331,20 @@ font-size:40px;
 </head>
 
 <body>
+
+<nav class="navbar">
+
+<div class="nav-logo">
+MOMENT
+</div>
+
+<div class="nav-links">
+<a href="#">Главная</a>
+<a href="#">Прайс</a>
+<a href="#">Контакты</a>
+</div>
+
+</nav>
 
 <section class="hero">
 
@@ -326,6 +415,7 @@ Membership
 <div class="pricing-grid">
 
 <div class="price-card">
+
 <div class="price-name">
 START
 </div>
@@ -337,6 +427,7 @@ START
 <div class="price-value">
 5 900 ₽
 </div>
+
 </div>
 
 <div class="price-card">
@@ -371,6 +462,22 @@ BLACK
 
 </div>
 
+</div>
+
+</section>
+
+<section class="about">
+
+<h2 class="section-title">
+Why MOMENT
+</h2>
+
+<div class="about-text">
+MOMENT — это не просто солярий.
+Это пространство эстетики, уверенности и атмосферы,
+где загар становится частью образа жизни.
+Современное оборудование, premium-сервис и интерьер,
+в который хочется возвращаться.
 </div>
 
 </section>
