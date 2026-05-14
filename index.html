@@ -31,14 +31,11 @@ top:0;
 left:0;
 width:100%;
 padding:24px 40px;
-
 display:flex;
 justify-content:space-between;
 align-items:center;
-
 background:rgba(0,0,0,0.35);
 backdrop-filter:blur(16px);
-
 z-index:1000;
 border-bottom:1px solid rgba(255,255,255,0.06);
 }
@@ -70,6 +67,8 @@ color:#c58b52;
 min-height:100vh;
 
 background:
+radial-gradient(circle at top right, rgba(197,139,82,0.18), transparent 30%),
+radial-gradient(circle at bottom left, rgba(197,139,82,0.12), transparent 25%),
 linear-gradient(rgba(0,0,0,0.72),rgba(0,0,0,0.82)),
 url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1974&auto=format&fit=crop');
 
@@ -79,6 +78,9 @@ background-position:center;
 display:flex;
 align-items:center;
 padding:40px;
+
+position:relative;
+overflow:hidden;
 }
 
 .content{
@@ -90,6 +92,7 @@ margin-top:60px;
 font-size:78px;
 letter-spacing:14px;
 font-weight:300;
+text-shadow:0 0 25px rgba(197,139,82,0.25);
 }
 
 .tag{
@@ -121,23 +124,27 @@ margin-top:40px;
 flex-wrap:wrap;
 }
 
-button{
+.btn-link{
 padding:18px 32px;
-border:none;
 border-radius:50px;
 font-size:16px;
 font-weight:bold;
 cursor:pointer;
 transition:0.3s;
+text-decoration:none;
+display:inline-flex;
+align-items:center;
+justify-content:center;
 }
 
-button:hover{
+.btn-link:hover{
 transform:translateY(-3px);
 }
 
 .primary{
 background:#c58b52;
 color:black;
+box-shadow:0 10px 30px rgba(197,139,82,0.25);
 }
 
 .secondary{
@@ -271,26 +278,18 @@ transform:scale(1.05);
 position:fixed;
 right:25px;
 bottom:25px;
-
 width:64px;
 height:64px;
-
 border-radius:50%;
-
 background:#c58b52;
 color:black;
-
 display:flex;
 align-items:center;
 justify-content:center;
-
 font-size:28px;
 text-decoration:none;
-
 box-shadow:0 10px 35px rgba(197,139,82,0.35);
-
 z-index:999;
-
 transition:0.3s;
 }
 
@@ -343,7 +342,7 @@ font-size:17px;
 flex-direction:column;
 }
 
-button{
+.btn-link{
 width:100%;
 }
 
@@ -371,7 +370,7 @@ MOMENT
 
 <div class="nav-links">
 <a href="#">Главная</a>
-<a href="#">Прайс</a>
+<a href="#pricing">Прайс</a>
 <a href="#">Контакты</a>
 </div>
 
@@ -400,13 +399,13 @@ PREMIUM TANNING STUDIO
 
 <div class="buttons">
 
-<button class="primary">
+<a href="#pricing" class="primary btn-link">
 Записаться
-</button>
+</a>
 
-<button class="secondary">
+<a href="#" class="secondary btn-link">
 WhatsApp
-</button>
+</a>
 
 </div>
 
@@ -437,7 +436,7 @@ WhatsApp
 
 </section>
 
-<section class="pricing">
+<section class="pricing" id="pricing">
 
 <h2 class="section-title">
 Membership
