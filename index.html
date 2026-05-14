@@ -115,6 +115,7 @@ padding:40px;
 
 position:relative;
 overflow:hidden;
+animation:bgZoom 12s ease-in-out infinite alternate;  
 }
 
 .content{
@@ -408,8 +409,16 @@ letter-spacing:10px;
 margin-bottom:20px;
 color:white;
 }
-
+@keyframes bgZoom{
+from{
+background-size:100%;
+}
+to{
+background-size:110%;
+}
+}
 @media(max-width:768px){
+
 
 .nav-links{
 display:none;
