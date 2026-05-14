@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MOMENT</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#0b0b0b;
+color:white;
+overflow-x:hidden;
+}
+
+.hero{
+height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.8)),
+url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1974&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+padding:40px;
+}
+
+.content{
+max-width:650px;
+}
+
+.logo{
+font-size:72px;
+letter-spacing:14px;
+font-weight:300;
+}
+
+.tag{
+margin-top:20px;
+color:#c58b52;
+letter-spacing:4px;
+font-size:14px;
+}
+
+.title{
+font-size:58px;
+line-height:1.1;
+margin-top:35px;
+font-weight:bold;
+}
+
+.text{
+margin-top:25px;
+font-size:20px;
+line-height:1.7;
+color:#cfcfcf;
+max-width:520px;
+}
+
+.buttons{
+display:flex;
+gap:15px;
+margin-top:40px;
+}
+
+button{
+padding:18px 30px;
+border:none;
+border-radius:50px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.primary{
+background:#c58b52;
+color:black;
+}
+
+.secondary{
+background:transparent;
+border:1px solid rgba(255,255,255,0.3);
+color:white;
+}
+
+.location{
+margin-top:40px;
+color:#9e9e9e;
+font-size:15px;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:25px;
+}
+
+.logo{
+font-size:46px;
+letter-spacing:8px;
+}
+
+.title{
+font-size:38px;
+}
+
+.text{
+font-size:17px;
+}
+
+.buttons{
+flex-direction:column;
+}
+
+button{
+width:100%;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="content">
+
+<div class="logo">
+MOMENT
+</div>
+
+<div class="tag">
+PREMIUM TANNING STUDIO
+</div>
+
+<div class="title">
+Загар, который выглядит дорого.
+</div>
+
+<div class="text">
+Вертикальный солярий MegaSun Tower T230
+для ровного, глубокого и естественного загара.
+</div>
+
+<div class="buttons">
+
+<button class="primary">
+Записаться
+</button>
+
+<button class="secondary">
+WhatsApp
+</button>
+
+</div>
+
+<div class="location">
+Причальный проезд, 10к1
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
