@@ -245,7 +245,53 @@ line-height:1.9;
 color:#d0d0d0;
 }
 
-.gallery{
+.reviews{
+padding:120px 40px;
+background:#0a0a0a;
+}
+
+.reviews-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:60px;
+}
+
+.review-card{
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:24px;
+padding:35px;
+backdrop-filter:blur(10px);
+transition:0.4s;
+}
+
+.review-card:hover{
+transform:translateY(-10px);
+border-color:#c8a96b;
+}
+
+.review-stars{
+font-size:22px;
+color:#c8a96b;
+margin-bottom:20px;
+letter-spacing:4px;
+}
+
+.review-text{
+font-size:16px;
+line-height:1.8;
+color:#d7d7d7;
+margin-bottom:25px;
+}
+
+.review-name{
+font-size:14px;
+letter-spacing:3px;
+text-transform:uppercase;
+color:white;
+opacity:0.8;
+}
 padding:120px 40px;
 }
 
