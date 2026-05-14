@@ -44,11 +44,12 @@ border-bottom:1px solid rgba(255,255,255,0.06);
 
 z-index:1000;
 transition:0.4s;
+box-shadow:0 10px 40px rgba(0,0,0,0.25);
 }
 
 
 
-}
+
 
 .nav-logo{
 font-size:26px;
@@ -65,9 +66,23 @@ color:white;
 text-decoration:none;
 font-size:15px;
 opacity:0.8;
-transition:0.3s;
+position:relative;
+transition:0.35s;
 }
+.nav-links a:after{
+content:'';
+position:absolute;
+left:0;
+bottom:-8px;
+width:0%;
+height:2px;
+background:#c58b52;
+transition:0.35s;
+}
+.nav-links a:hover:after{
+width:100%;
 
+}
 .nav-links a:hover{
 opacity:1;
 color:#c58b52;
@@ -141,7 +156,7 @@ animation:bgMove 18s ease-in-out infinite alternate;
 z-index:0;
 will-change:transform;
 }
-.content{
+.content{  
 max-width:650px;
 margin-top:60px;
 position:relative;
@@ -150,6 +165,18 @@ opacity:0;
 transform:translateY(40px);
 animation:fadeUp 1.2s ease forwards;
 }
+.content::after{
+content:'';
+position:absolute;
+top:-120px;
+left:-80px;
+width:420px;
+height:420px;
+background:radial-gradient(circle, rgba(197,139,82,0.18), transparent 70%);
+filter:blur(60px);
+z-index:-1;
+pointer-events:none;
+}  
 @keyframes fadeUp{
 from{
 opacity:0;
@@ -179,13 +206,17 @@ font-size:62px;
 line-height:1.05;
 margin-top:35px;
 font-weight:bold;
+text-shadow:0 0 40px rgba(197,139,82,0.18);
+line-height:1.05;
+font-weight:800;  
 }
 
 .text{
+letter-spacing:0.4px;
+color:rgba(255,255,255,0.82);
 margin-top:25px;
 font-size:20px;
 line-height:1.8;
-color:#cfcfcf;
 max-width:540px;
 }
 
@@ -248,14 +279,35 @@ flex-wrap:wrap;
 }
 
 .stat{
+opacity:0;
+transform:translateY(30px);
+animation:fadeUp 1s ease forwards;
 background:rgba(255,255,255,0.05);
 backdrop-filter:blur(12px);
 padding:18px 24px;
 border-radius:24px;
 border:1px solid rgba(255,255,255,0.08);
 min-width:150px;
+transition:0.35s;
+cursor:default;  
+}
+.stat:nth-child(1){
+animation-delay:0.2s;
+}
+.stat:hover{
+transform:translateY(-8px);
+background:rgba(255,255,255,0.08);
+box-shadow:0 18px 40px rgba(0,0,0,0.25);
+}  
 }
 
+.stat:nth-child(2){
+animation-delay:0.4s;
+}
+
+.stat:nth-child(3){
+animation-delay:0.6s;
+}
 .stat span{
 font-size:24px;
 font-weight:bold;
@@ -441,8 +493,19 @@ color:white;
 from{
 transform:scale(1);
 }
+
 to{
 transform:scale(1.04);
+}
+}
+
+@keyframes logoGlow{
+from{
+text-shadow:0 0 20px rgba(197,139,82,0.18);
+}
+
+to{
+text-shadow:0 0 40px rgba(197,139,82,0.45);
 }
 }
 @media(max-width:768px){
@@ -461,10 +524,16 @@ padding:25px;
 }
 
 .logo{
+animation:logoGlow 4s ease-in-out infinite alternate;  
 font-size:48px;
 letter-spacing:8px;
+cursor:default;
+transition:0.4s;  
 }
-
+.logo:hover{
+transform:scale(1.04);
+letter-spacing:10px;
+}
 .title{
 font-size:40px;
 
