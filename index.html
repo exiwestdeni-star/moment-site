@@ -115,7 +115,7 @@ padding:40px;
 
 position:relative;
 overflow:hidden;
-animation:bgZoom 12s ease-in-out infinite alternate;  
+animation:bgMove 18s ease-in-out infinite alternate;  
 }
 
 .content{
@@ -409,12 +409,12 @@ letter-spacing:10px;
 margin-bottom:20px;
 color:white;
 }
-@keyframes bgZoom{
+@keyframes bgMove{
 from{
-background-size:100%;
+transform:scale(1);
 }
 to{
-background-size:110%;
+transform:scale(1.04);
 }
 }
 @media(max-width:768px){
