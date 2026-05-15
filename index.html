@@ -464,7 +464,49 @@ letter-spacing:2px;
 }
 
 /* FOOTER */
+.booking{
+padding:140px 8%;
+background:#070707;
+}
 
+.booking-form{
+max-width:620px;
+display:flex;
+flex-direction:column;
+gap:22px;
+}
+
+.booking-form input{
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
+padding:22px;
+border-radius:20px;
+color:white;
+font-size:16px;
+outline:none;
+transition:0.35s;
+}
+
+.booking-form input:focus{
+border-color:#c58b52;
+box-shadow:0 0 20px rgba(197,139,82,0.2);
+}
+
+.booking-form button{
+padding:22px;
+border:none;
+border-radius:20px;
+background:#c58b52;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.35s;
+}
+
+.booking-form button:hover{
+transform:translateY(-5px);
+box-shadow:0 20px 40px rgba(197,139,82,0.25);
+}
 .footer{
 padding:80px 8%;
 text-align:center;
@@ -607,9 +649,9 @@ MOMENT
 
 <div class="nav-links">
 <a href="#">Главная</a>
-<a href="#">Прайс</a>
+<a href="#pricing">Прайс</a>
 <a href="#">Отзывы</a>
-<a href="#">Контакты</a>
+<a href="#reviews">Отзывы</a>
 </div>
 
 </nav>
@@ -669,7 +711,7 @@ WhatsApp
 
 </section>
 
-<section class="pricing">
+<section class="pricing" id="pricing">
 
 <h2 class="section-title">
 Абонемент
@@ -726,7 +768,7 @@ WhatsApp
 </div>
 
 </section>
-<section class="reviews">
+<section class="reviews" id="reviews">
 
 <h2 class="section-title">
 Отзывы
@@ -776,7 +818,25 @@ MegaSun дает очень ровный загар.
 </div>
 
 </section>
+<section class="booking" id="booking">
 
+<h2 class="section-title">
+Запись
+</h2>
+
+<form class="booking-form">
+
+<input type="text" placeholder="Ваше имя" required>
+
+<input type="tel" placeholder="Номер телефона" required>
+
+<button type="submit">
+Отправить заявку
+</button>
+
+</form>
+
+</section>
 <footer class="footer">
 
 <p>
