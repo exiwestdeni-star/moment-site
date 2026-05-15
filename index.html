@@ -915,6 +915,49 @@ MOMENT — Premium Solarium
 </p>
 
 </footer>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 
+import {
+getFirestore,
+collection,
+addDoc,
+getDocs
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+apiKey: "AIzaSyAHpmj602uvD9iQOq7M8vQCeuMbPhq1ydA",
+authDomain: "moment-site.firebaseapp.com",
+projectId: "moment-site",
+storageBucket: "moment-site.firebasestorage.app",
+messagingSenderId: "825467065360",
+appId: "1:825467065360:web:fc3c12bd787f7355592695"
+};
+
+const app = initializeApp(firebaseConfig);
+
+const db = getFirestore(app);
+
+const reviewForm = document.querySelector(".review-form");
+
+reviewForm.addEventListener("submit", async (e) => {
+e.preventDefault();
+
+const name = reviewForm.querySelector('input').value;
+
+const text = reviewForm.querySelector('textarea').value;
+
+await addDoc(collection(db, "reviews"), {
+name,
+text,
+created: Date.now()
+});
+
+alert("Отзыв отправлен");
+
+reviewForm.reset();
+});
+</script>
 </body>
+
 </html>
