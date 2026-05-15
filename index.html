@@ -957,6 +957,39 @@ alert("Отзыв отправлен");
 
 reviewForm.reset();
 });
+async function loadReviews() {
+
+const reviewsContainer = document.querySelector(".reviews-grid");
+
+const querySnapshot = await getDocs(collection(db, "reviews"));
+
+querySnapshot.forEach((doc) => {
+
+const data = doc.data();
+
+const review = document.createElement("div");
+
+review.className = "review-card";
+
+review.innerHTML = `
+<div class="review-stars">★★★★★</div>
+
+<div class="review-text">
+${data.text}
+</div>
+
+<div class="review-name">
+— ${data.name}
+</div>
+`;
+
+reviewsContainer.prepend(review);
+
+});
+
+}
+
+loadReviews();
 </script>
 </body>
 
