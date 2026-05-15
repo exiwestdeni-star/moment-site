@@ -329,7 +329,91 @@ margin-bottom:20px;
 font-size:34px;
 color:#f6d2a4;
 }
+/* TANNING SHOWCASE */
 
+.tanning-showcase{
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:70px;
+
+padding:140px 8%;
+
+background:#050505;
+}
+
+.tanning-image{
+position:relative;
+}
+
+.tanning-image img{
+width:100%;
+border-radius:32px;
+
+border:1px solid rgba(255,255,255,0.08);
+
+box-shadow:
+0 25px 60px rgba(0,0,0,0.45),
+0 0 40px rgba(197,139,82,0.08);
+
+transition:0.5s;
+}
+
+.tanning-image img:hover{
+transform:scale(1.02);
+}
+
+.tanning-info{
+max-width:520px;
+}
+
+.small-label{
+letter-spacing:4px;
+font-size:13px;
+color:#c58b52;
+margin-bottom:22px;
+}
+
+.tanning-info h2{
+font-size:56px;
+font-weight:300;
+margin-bottom:30px;
+color:#f6d2a4;
+line-height:1.1;
+}
+
+.tanning-info p{
+font-size:20px;
+line-height:1.9;
+color:rgba(255,255,255,0.78);
+margin-bottom:35px;
+}
+
+.feature-list{
+display:grid;
+gap:18px;
+}
+
+.feature-list div{
+background:rgba(255,255,255,0.04);
+
+border:1px solid rgba(255,255,255,0.08);
+
+padding:18px 22px;
+
+border-radius:18px;
+
+font-size:15px;
+letter-spacing:1px;
+
+transition:0.35s;
+}
+
+.feature-list div:hover{
+transform:translateX(8px);
+border-color:#c58b52;
+background:rgba(255,255,255,0.06);
+}
 /* REVIEWS */
 
 .reviews{
@@ -493,8 +577,23 @@ justify-content:center;
 .section-title{
 font-size:42px;
 }
+.tanning-showcase{
+grid-template-columns:1fr;
 }
 
+.tanning-info{
+text-align:center;
+max-width:100%;
+}
+
+.tanning-info h2{
+font-size:42px;
+}
+
+.feature-list{
+margin-top:30px;
+}
+  
 </style>
 </head>
 
