@@ -507,6 +507,56 @@ transition:0.35s;
 transform:translateY(-5px);
 box-shadow:0 20px 40px rgba(197,139,82,0.25);
 }
+.review-form-section{
+padding:140px 8%;
+background:#050505;
+}
+
+.review-form{
+max-width:700px;
+display:flex;
+flex-direction:column;
+gap:22px;
+}
+
+.review-form input,
+.review-form textarea{
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
+padding:22px;
+border-radius:22px;
+color:white;
+font-size:16px;
+outline:none;
+transition:0.35s;
+}
+
+.review-form textarea{
+min-height:180px;
+resize:none;
+}
+
+.review-form input:focus,
+.review-form textarea:focus{
+border-color:#c58b52;
+box-shadow:0 0 20px rgba(197,139,82,0.2);
+}
+
+.review-form button{
+padding:22px;
+border:none;
+border-radius:22px;
+background:#c58b52;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.35s;
+}
+
+.review-form button:hover{
+transform:translateY(-5px);
+box-shadow:0 20px 40px rgba(197,139,82,0.25);
+}
 .footer{
 padding:80px 8%;
 text-align:center;
@@ -830,6 +880,25 @@ MegaSun дает очень ровный загар.
 
 <button type="submit">
 Отправить заявку
+</button>
+
+</form>
+
+</section>
+<section class="review-form-section">
+
+<h2 class="section-title">
+Оставить отзыв
+</h2>
+
+<form class="review-form">
+
+<input type="text" placeholder="Ваше имя" required>
+
+<textarea placeholder="Ваш отзыв" required></textarea>
+
+<button type="submit">
+Отправить отзыв
 </button>
 
 </form>
